@@ -1,4 +1,10 @@
 @import "nullstyle.scss";
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 
 .wrapper{
     height: 100%;
@@ -42,7 +48,7 @@
 .container__submit:hover{
     background: rgb(15, 154, 15);
 }
-.all-result{
+.container__result{
     position: absolute;
     top: 54.5%;
     left: 40.5%;
